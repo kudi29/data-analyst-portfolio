@@ -98,7 +98,22 @@
       min-height: 70px;
       display: flex;
       align-items: center;
-      justify-content: flex-end;
+      justify-content: space-between;
+    }
+
+    /* KUDI LOGO RESTORED */
+
+    .logo {
+      color: var(--text);
+      font-size: 1.65rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .logo span {
+      color: var(--accent);
     }
 
     .nav-links {
@@ -460,12 +475,18 @@
       .skills-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
+
+      .nav-links {
+        gap: 18px;
+      }
     }
 
     @media (max-width: 680px) {
       .nav-content {
         justify-content: center;
-        padding: 15px 0;
+        flex-direction: column;
+        gap: 16px;
+        padding: 18px 0;
       }
 
       .nav-links {
@@ -535,6 +556,12 @@
   <!-- NAVIGATION -->
   <header class="navbar">
     <nav class="container nav-content" aria-label="Main navigation">
+
+      <!-- KUDI LOGO -->
+      <a class="logo" href="#home" aria-label="Kudi home">
+        KUDI<span>.</span>
+      </a>
+
       <div class="nav-links">
         <a href="#home">Home</a>
         <a href="#about">About</a>
@@ -543,6 +570,7 @@
         <a href="#approach">My Approach</a>
         <a href="#contact">Contact</a>
       </div>
+
     </nav>
   </header>
 
