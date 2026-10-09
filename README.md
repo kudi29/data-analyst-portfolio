@@ -1,63 +1,103 @@
-**# Data-Analyst-Portfolio
+<div align="center">
 
-**Turning business data into reliable analysis and actionable insights.**
+# Wadahfred Kudi
 
-Welcome to my data analytics portfolio. I use SQL, PostgreSQL, Power BI, and data modeling to investigate business problems, analyze performance, and communicate findings that support better decisions.
+### Data Analyst | Applied Statistics | Data Quality & Reporting
 
-## About Me
+*I turn messy data into numbers decision-makers can trust.*
 
-I am an aspiring Data Analyst focused on business performance analysis, data quality, analytical modeling, and business intelligence. My approach starts with understanding the business question and validating the data before building reports.
+[![Portfolio](https://img.shields.io/badge/Live%20Portfolio-kudi29.github.io-60a5fa?style=for-the-badge)](https://kudi29.github.io)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0a66c2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/wadahfred-kudi-b19344207/)
+[![Email](https://img.shields.io/badge/Email-wadahfred29%40gmail.com-ea4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:wadahfred29@gmail.com)
 
-## Featured Projects
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?logo=postgresql&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-0b1120)
+![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?logo=powerbi&logoColor=black)
+![DAX](https://img.shields.io/badge/DAX-1f6f8b)
+![Excel](https://img.shields.io/badge/Excel-217346?logo=microsoftexcel&logoColor=white)
+![Git](https://img.shields.io/badge/Git%20%26%20GitHub-181717?logo=github&logoColor=white)
 
-### 1. Sales & Profitability Analysis
+📍 Hangzhou, China · Open to remote roles or relocation
 
-**Tools:** PostgreSQL, SQL, Power BI, DAX
+</div>
 
-An end-to-end analysis of sales, costs, profitability, discount performance, and product performance.
+---
 
-* Built a structured data pipeline using Bronze, Silver, and Gold layers.
-* Designed fact and dimension tables for reliable analysis.
-* Developed interactive reports to investigate sales and profitability.
-* Identified business patterns relating to discounts and profit margins.
+## About
 
-[View Project]([PASTE-YOUR-PROJECT-URL-HERE](https://github.com/kudi29/Operations_and_Revenue_Analysis))
+Data analyst with a strong foundation in **applied statistics, data quality, SQL and Power BI**. I'm completing an **MSc in Applied Statistics** (expected Jan 2027) at Zhejiang University of Science and Technology.
 
-### 2. AdventureWorks Sales Analysis
+My process: understand the business question → profile and clean the data in PostgreSQL → model it with a clear grain → **reconcile the numbers** → only then visualize.
 
-**Tools:** PostgreSQL, SQL, Power BI, DAX
+## Featured projects
 
-An end-to-end sales analysis examining revenue, product performance, territory performance, and profitability across sales channels.
+### 1. [Operations & Revenue Analysis (AdventureWorks)](https://github.com/kudi29/Operations_and_Revenue_Analysis)
 
-* Defined the sales order line as the analytical grain.
-* Investigated sales trends, product performance, and territory differences.
-* Compared sales, costs, gross profit, and profit margins.
-* Developed management-focused reporting and business findings.
+**PostgreSQL · Bronze/Silver/Gold · Star schema · Power BI · DAX**
 
-[View Project]([PASTE-YOUR-PROJECT-URL-HERE](https://github.com/kudi29/Sales-Profitability-Analysis))
+Scoped a stakeholder email into KPIs, then analysed **121,253 sales order lines** (FY2018-FY2020).
 
-## Technical Skills
+| Finding | Result |
+|---|---|
+| Growth with margin pressure | Sales $23.9M → $51.9M, margin 12.7% → 11.2% |
+| Revenue ≠ profit | Australia: ~10% of sales, 29% of gross profit |
+| Where the losses are | Touring Bikes: -11.8% margin via resellers vs 37.8% online. Discounting tested and ruled out |
 
-* **SQL & Databases:** PostgreSQL, querying, joins, aggregations, data validation
-* **Business Intelligence:** Power BI, DAX, Power Query
-* **Analytics:** Data profiling, data cleaning, data modeling, trend analysis, profitability analysis
-* **Reporting:** Business requirements, report design, insight communication
+<p align="center">
+  <img src="images/projects/adventureworks-executive-overview.jpg" width="48%" alt="AdventureWorks Executive Overview">
+  <img src="images/projects/adventureworks-product-performance.jpg" width="48%" alt="AdventureWorks Product Performance">
+</p>
 
-## Analytical Approach
+### 2. [Sales & Profitability Analysis](https://github.com/kudi29/Sales-Profitability-Analysis)
 
-1. Understand the business problem.
-2. Clarify the questions the analysis must answer.
-3. Inspect and validate the available data.
-4. Prepare and transform the data.
-5. Build an appropriate analytical data model.
-6. Analyze results and validate calculations.
-7. Communicate findings and business implications.
+**PostgreSQL · SQL views · Star schema · Power BI · DAX**
 
-## Contact
+Turned a **180K-row supply-chain dataset** into a 3-page decision-ready report, fixing data-quality issues in SQL before building any visual.
 
-* **LinkedIn:** PASTE-YOUR-LINKEDIN-URL
-* **Email:** PASTE-YOUR-PROFESSIONAL-EMAIL
+- Bronze → Silver → Gold PostgreSQL workflow
+- Star schema with fact and dimension tables and a defined grain
+- SQL reporting views, DAX measures, validation and reconciliation checks
+- Documented limitation: 2018 holds only 37 days, so it is excluded from year-on-year comparisons
 
-Thank you for visiting my portfolio.
+<p align="center">
+  <img src="images/projects/sales-executive-overview.jpg" width="32%" alt="Sales Executive Overview">
+  <img src="images/projects/sales-discount-analysis.jpg" width="32%" alt="Discount Analysis">
+  <img src="images/projects/sales-product-category.jpg" width="32%" alt="Product and Category Performance">
+</p>
 
-**
+## Skills
+
+| Area | Tools & methods |
+|---|---|
+| Data management & quality | Data profiling, cleaning, validation, ETL and data preparation |
+| SQL & databases | PostgreSQL, CTEs, window functions, views, relational modeling |
+| Data modeling | Star schema, fact and dimension design, grain definition |
+| Reporting & visualization | Power BI, DAX, Power Query, KPI reporting, data storytelling |
+| Analysis & statistics | Statistical and descriptive analysis, trend and pattern identification |
+
+## Experience
+
+**Sales Support / Operations Assistant** · Topline Promos · Hangzhou · Mar 2024 - present
+Keep product and order data accurate across dozens of listings, catch pricing and description inconsistencies, and explain information gaps to non-technical stakeholders.
+
+## Education
+
+- **MSc Applied Statistics**, Zhejiang University of Science and Technology (expected Jan 2027)
+- **BSc Communications Engineering**, Zhejiang University of Science and Technology (2023)
+
+## About this site
+
+Hand-built with plain HTML and CSS (no frameworks), responsive, and hosted on GitHub Pages.
+
+```text
+├── index.html
+├── style.css
+├── assets/Wadahfred_Kudi_CV.pdf
+└── images/
+    ├── profile.png
+    └── projects/
+```
+
+---
+
+<div align="center">Open to data analyst roles. <a href="mailto:wadahfred29@gmail.com">Let's talk.</a></div>
