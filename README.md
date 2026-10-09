@@ -1,2 +1,2 @@
-# data-analyst-portfolio
+# Data-analyst-portfolio
 Data analytics portfolio showcasing SQL, PostgreSQL, Power BI, data modeling, and business insights.
