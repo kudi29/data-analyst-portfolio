@@ -1,4 +1,4 @@
-# Data-Analyst-Portfolio
+**# Data-Analyst-Portfolio
 
 **Turning business data into reliable analysis and actionable insights.**
 
@@ -60,3 +60,4 @@ An end-to-end sales analysis examining revenue, product performance, territory p
 
 Thank you for visiting my portfolio.
 
+**
