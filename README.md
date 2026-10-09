@@ -35,7 +35,7 @@ My process: understand the business question → profile and clean the data in P
 
 **PostgreSQL · Bronze/Silver/Gold · Star schema · Power BI · DAX**
 
-Scoped a stakeholder email into KPIs, then analysed **121,253 sales order lines** (FY2018-FY2020).
+Scoped a stakeholder request into KPIs, then analysed **121,253 sales order lines** (FY2018-FY2020).
 
 | Finding | Result |
 |---|---|
