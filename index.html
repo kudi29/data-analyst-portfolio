@@ -5,11 +5,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="Wadahfred Kudi's data analytics portfolio featuring PostgreSQL, SQL, Power BI, data modeling, and business insights.">
+  <meta
+    name="description"
+    content="Kudi's data analytics portfolio showcasing PostgreSQL, SQL, Power BI, data modeling, and business insights."
+  >
 
-  <title>Wadahfred Kudi | Data Analyst Portfolio</title>
+  <title>Kudi | Data Analyst Portfolio</title>
 
   <style>
+    /* =========================
+       1. GLOBAL STYLES
+    ========================= */
+
     :root {
       --background: #0b1120;
       --panel: #111b2e;
@@ -18,6 +25,7 @@
       --muted: #a1aec2;
       --accent: #60a5fa;
       --border: #26354b;
+      --white: #ffffff;
     }
 
     * {
@@ -73,7 +81,9 @@
       color: var(--accent);
     }
 
-    /* NAVIGATION */
+    /* =========================
+       2. NAVIGATION
+    ========================= */
 
     .navbar {
       position: sticky;
@@ -108,7 +118,9 @@
       color: var(--accent);
     }
 
-    /* HERO */
+    /* =========================
+       3. HERO SECTION
+    ========================= */
 
     .hero {
       min-height: 600px;
@@ -153,7 +165,7 @@
     }
 
     .hero h1 {
-      font-size: clamp(2.5rem, 5vw, 4.1rem);
+      font-size: clamp(2.5rem, 5vw, 4.3rem);
       line-height: 1.12;
       letter-spacing: -1.5px;
       margin-bottom: 22px;
@@ -182,7 +194,10 @@
       font-size: 0.92rem;
       font-weight: 700;
       border: 1px solid var(--border);
-      transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+      transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease;
     }
 
     .button:hover {
@@ -210,7 +225,9 @@
       color: var(--accent);
     }
 
-    /* ABOUT */
+    /* =========================
+       4. ABOUT SECTION
+    ========================= */
 
     .about-section {
       background: #0e1728;
@@ -227,7 +244,9 @@
       margin-bottom: 18px;
     }
 
-    /* PROJECTS */
+    /* =========================
+       5. PROJECTS SECTION
+    ========================= */
 
     .projects-grid {
       display: grid;
@@ -242,7 +261,9 @@
       background: var(--panel);
       border: 1px solid var(--border);
       border-radius: 12px;
-      transition: transform 0.2s ease, border-color 0.2s ease;
+      transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
     }
 
     .project-card:hover {
@@ -316,7 +337,9 @@
       text-decoration: underline;
     }
 
-    /* SKILLS */
+    /* =========================
+       6. SKILLS SECTION
+    ========================= */
 
     .skills-section {
       background: #0e1728;
@@ -347,7 +370,9 @@
       font-size: 0.92rem;
     }
 
-    /* ANALYSIS APPROACH */
+    /* =========================
+       7. ANALYSIS APPROACH
+    ========================= */
 
     .approach-content {
       display: grid;
@@ -372,7 +397,9 @@
       font-size: 0.95rem;
     }
 
-    /* CONTACT */
+    /* =========================
+       8. CONTACT SECTION
+    ========================= */
 
     .contact-section {
       background: #0e1728;
@@ -394,7 +421,9 @@
       gap: 14px;
     }
 
-    /* FOOTER */
+    /* =========================
+       9. FOOTER
+    ========================= */
 
     footer {
       padding: 25px 0;
@@ -414,7 +443,9 @@
       font-size: 0.85rem;
     }
 
-    /* RESPONSIVE DESIGN */
+    /* =========================
+       10. RESPONSIVE DESIGN
+    ========================= */
 
     @media (max-width: 900px) {
       .hero-layout {
@@ -517,7 +548,7 @@
 
   <main>
 
-    <!-- HERO: PHOTO LEFT, FULL NAME AND INTRODUCTION RIGHT -->
+    <!-- HERO SECTION: PHOTO LEFT, INTRODUCTION RIGHT -->
     <section class="hero" id="home">
       <div class="container hero-layout">
 
@@ -525,7 +556,7 @@
           <img
             class="profile-photo"
             src="images/profile.jpg"
-            alt="Portrait of Wadahfred Kudi"
+            alt="Portrait of Kudi"
             width="320"
             height="400"
           >
@@ -535,8 +566,8 @@
           <span class="eyebrow">Data Analyst | SQL | Power BI</span>
 
           <h1>
-            Wadahfred <span class="accent">Kudi.</span>
-            Turning Data Into Business Insight.
+            Turning Data Into
+            <span class="accent">Business Insight.</span>
           </h1>
 
           <p class="hero-description">
@@ -547,7 +578,10 @@
           </p>
 
           <div class="hero-actions">
-            <a class="button button-primary" href="#projects">
+            <a
+              class="button button-primary"
+              href="#projects"
+            >
               Explore My Projects
             </a>
 
@@ -624,6 +658,7 @@
 
         <div class="projects-grid">
 
+          <!-- PROJECT 1 -->
           <article class="project-card">
             <span class="project-number">PROJECT 01</span>
 
@@ -661,6 +696,7 @@
             </a>
           </article>
 
+          <!-- PROJECT 2 -->
           <article class="project-card">
             <span class="project-number">PROJECT 02</span>
 
@@ -698,6 +734,7 @@
             </a>
           </article>
 
+          <!-- PROJECT 3 -->
           <article class="project-card">
             <span class="project-number">PROJECT 03</span>
 
@@ -735,6 +772,7 @@
             </a>
           </article>
 
+          <!-- PROJECT 4 -->
           <article class="project-card">
             <span class="project-number">PROJECT 04</span>
 
@@ -888,7 +926,7 @@
             <h3>04. Analyze and Communicate Findings</h3>
             <p>
               Use SQL, measures, and appropriate visuals to answer
-              business questions, explain findings, and identify
+              business questions, explain the findings, and identify
               practical next steps.
             </p>
           </article>
@@ -941,7 +979,7 @@
   <!-- FOOTER -->
   <footer>
     <div class="container footer-content">
-      <p>© 2026 Wadahfred Kudi. All rights reserved.</p>
+      <p>© 2026 Kudi. All rights reserved.</p>
       <p>Built with HTML and CSS · Hosted on GitHub Pages</p>
     </div>
   </footer>
