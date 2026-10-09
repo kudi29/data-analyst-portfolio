@@ -21,7 +21,7 @@ An end-to-end analysis of sales, costs, profitability, discount performance, and
 * Developed interactive reports to investigate sales and profitability.
 * Identified business patterns relating to discounts and profit margins.
 
-[View Project](PASTE-YOUR-PROJECT-URL-HERE)
+[View Project]([PASTE-YOUR-PROJECT-URL-HERE](https://github.com/kudi29/Operations_and_Revenue_Analysis))
 
 ### 2. AdventureWorks Sales Analysis
 
@@ -34,7 +34,7 @@ An end-to-end sales analysis examining revenue, product performance, territory p
 * Compared sales, costs, gross profit, and profit margins.
 * Developed management-focused reporting and business findings.
 
-[View Project](PASTE-YOUR-PROJECT-URL-HERE)
+[View Project]([PASTE-YOUR-PROJECT-URL-HERE](https://github.com/kudi29/Sales-Profitability-Analysis))
 
 ## Technical Skills
 
