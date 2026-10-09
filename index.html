@@ -1,1 +1,601 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Data analytics portfolio showcasing SQL, PostgreSQL, Power BI, data modeling, and business insights.">
+  <title>Kudi | Data Analyst Portfolio</title>
+
+  <style>
+    :root {
+      --bg: #0b1120;
+      --panel: #111b2e;
+      --text: #f1f5f9;
+      --muted: #a1aec2;
+      --accent: #60a5fa;
+      --border: #26354b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1080px, 90%);
+      margin: auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(11, 17, 32, 0.94);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+    }
+
+    nav {
+      min-height: 72px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover,
+    .text-link:hover {
+      color: var(--accent);
+    }
+
+    .hero {
+      padding: 105px 0 90px;
+      border-bottom: 1px solid var(--border);
+      background:
+        radial-gradient(ellipse at 80% 20%, #19345b 0%, transparent 48%);
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 780px;
+      margin: 18px 0;
+      font-size: clamp(2.5rem, 6vw, 4.7rem);
+      line-height: 1.12;
+      letter-spacing: -2px;
+    }
+
+    h1 span {
+      color: var(--accent);
+    }
+
+    .hero p {
+      max-width: 680px;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 11px 19px;
+      border: 1px solid var(--border);
+      border-radius: 7px;
+      font-weight: 700;
+      font-size: 0.92rem;
+      transition: 0.2s;
+    }
+
+    .button.primary {
+      background: var(--accent);
+      color: #08111f;
+      border-color: var(--accent);
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
+
+    section {
+      padding: 76px 0;
+    }
+
+    .section-heading {
+      margin-bottom: 30px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      margin-bottom: 8px;
+    }
+
+    .section-heading p,
+    .about p,
+    .contact p {
+      color: var(--muted);
+      max-width: 720px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 27px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+    }
+
+    .project-number {
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+    }
+
+    .project-card h3 {
+      margin: 12px 0 10px;
+      font-size: 1.3rem;
+      line-height: 1.4;
+    }
+
+    .project-card p {
+      color: var(--muted);
+      font-size: 0.94rem;
+      margin-bottom: 18px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 22px;
+    }
+
+    .tag {
+      background: #1c2c44;
+      color: #c5d9f5;
+      border-radius: 5px;
+      padding: 4px 9px;
+      font-size: 0.77rem;
+    }
+
+    .text-link {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-top: auto;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .skill {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 17px;
+    }
+
+    .skill h3 {
+      font-size: 0.98rem;
+      margin-bottom: 6px;
+    }
+
+    .skill p {
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    .approach {
+      border-left: 3px solid var(--accent);
+      padding: 5px 0 5px 22px;
+      color: var(--muted);
+      max-width: 800px;
+    }
+
+    .approach strong {
+      color: var(--text);
+    }
+
+    .contact-panel {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 35px;
+    }
+
+    footer {
+      padding: 25px 0;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    footer .container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    @media (max-width: 700px) {
+      .nav-links {
+        gap: 12px;
+        font-size: 0.8rem;
+      }
+
+      .hero {
+        padding: 75px 0 65px;
+      }
+
+      .projects {
+        grid-template-columns: 1fr;
+      }
+
+      .skills {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      section {
+        padding: 58px 0;
+      }
+
+      .contact-panel {
+        padding: 24px;
+      }
+    }
+
+    @media (max-width: 390px) {
+      nav {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 15px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav class="container">
+      <a class="logo" href="#home">KUDI<span>.</span></a>
+
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="eyebrow">Data Analyst Portfolio</div>
+
+        <h1>
+          Turning data into
+          <span>business decisions.</span>
+        </h1>
+
+        <p>
+          I use SQL, PostgreSQL, and Power BI to investigate business
+          performance, build reliable analytical models, and uncover
+          insights that help businesses make informed decisions.
+        </p>
+
+        <div class="buttons">
+          <a class="button primary" href="#projects">
+            Explore My Projects &darr;
+          </a>
+
+          <a class="button"
+             href="https://github.com/kudi29"
+             target="_blank"
+             rel="noopener noreferrer">
+            GitHub Profile &#8599;
+          </a>
+
+          <a class="button"
+             href="https://www.linkedin.com/in/wadahfred-kudi-b19344207/"
+             target="_blank"
+             rel="noopener noreferrer">
+            LinkedIn &#8599;
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">A little about me</div>
+          <h2>My analytical approach</h2>
+        </div>
+
+        <p>
+          I approach data analysis by starting with the business problem,
+          not the dashboard. I focus on understanding what stakeholders
+          need to know, checking whether the data can answer their
+          questions, validating the underlying calculations, and
+          communicating findings clearly.
+        </p>
+        <br>
+        <p>
+          My goal is to produce analysis that is not only visually clear
+          but also accurate, traceable, and useful for decision-making.
+        </p>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">Selected work</div>
+          <h2>Featured Projects</h2>
+          <p>
+            Practical analytics projects focused on business performance,
+            data quality, and decision support.
+          </p>
+        </div>
+
+        <div class="projects">
+
+          <article class="project-card">
+            <div class="project-number">PROJECT 01 · FEATURED</div>
+            <h3>Sales &amp; Profitability Analysis</h3>
+            <p>
+              An end-to-end analysis of sales, costs, discount performance,
+              and profitability, supported by a structured data pipeline
+              and interactive Power BI reporting.
+            </p>
+            <div class="tags">
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">SQL</span>
+              <span class="tag">Power BI</span>
+              <span class="tag">DAX</span>
+            </div>
+            <a class="text-link"
+               href="https://github.com/kudi29/Sales-Profitability-Analysis"
+               target="_blank"
+               rel="noopener noreferrer">
+              Explore Project &#8599;
+            </a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-number">PROJECT 02</div>
+            <h3>AdventureWorks Sales Analysis</h3>
+            <p>
+              A business-focused investigation of sales performance,
+              product and territory differences, and profitability
+              across sales channels.
+            </p>
+            <div class="tags">
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">SQL</span>
+              <span class="tag">Power BI</span>
+              <span class="tag">Data Modeling</span>
+            </div>
+            <a class="text-link"
+               href="https://github.com/kudi29"
+               target="_blank"
+               rel="noopener noreferrer">
+              Find Project on GitHub &#8599;
+            </a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-number">PROJECT 03</div>
+            <h3>Healthcare Utilization &amp; Revenue Analysis</h3>
+            <p>
+              An analytical project exploring healthcare utilization,
+              hospital revenue, and patient outcomes to support
+              evidence-based operational decisions.
+            </p>
+            <div class="tags">
+              <span class="tag">Data Analysis</span>
+              <span class="tag">Revenue</span>
+              <span class="tag">Healthcare</span>
+            </div>
+            <a class="text-link"
+               href="https://github.com/kudi29/Healthcare-Utilization-Revenue-Analysis"
+               target="_blank"
+               rel="noopener noreferrer">
+              Explore Project &#8599;
+            </a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-number">PROJECT 04</div>
+            <h3>Operations &amp; Revenue Analysis</h3>
+            <p>
+              An analysis focused on understanding operational performance
+              and revenue patterns through structured data exploration
+              and business-oriented reporting.
+            </p>
+            <div class="tags">
+              <span class="tag">Analytics</span>
+              <span class="tag">Business Reporting</span>
+              <span class="tag">Insights</span>
+            </div>
+            <a class="text-link"
+               href="https://github.com/kudi29/Operations_and_Revenue_Analysis"
+               target="_blank"
+               rel="noopener noreferrer">
+              Explore Project &#8599;
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">Technical toolkit</div>
+          <h2>Skills &amp; Tools</h2>
+        </div>
+
+        <div class="skills">
+          <div class="skill">
+            <h3>SQL &amp; Databases</h3>
+            <p>PostgreSQL, joins, aggregations, data validation</p>
+          </div>
+
+          <div class="skill">
+            <h3>Power BI</h3>
+            <p>DAX, Power Query, interactive reports</p>
+          </div>
+
+          <div class="skill">
+            <h3>Data Modeling</h3>
+            <p>Fact tables, dimensions, analytical grain</p>
+          </div>
+
+          <div class="skill">
+            <h3>Business Analysis</h3>
+            <p>Requirements, trends, profitability, insights</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">How I work</div>
+          <h2>Analysis before presentation</h2>
+        </div>
+
+        <div class="approach">
+          <strong>Understand the question.</strong> Clarify the business
+          problem and what a useful answer looks like.
+          <br><br>
+          <strong>Validate the data.</strong> Inspect the data quality,
+          definitions, relationships, and level of detail.
+          <br><br>
+          <strong>Build reliable analysis.</strong> Transform the data,
+          model it appropriately, and verify calculations.
+          <br><br>
+          <strong>Communicate the findings.</strong> Explain what the
+          results mean and what deserves management's attention.
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="contact-panel">
+          <div class="eyebrow">Let's connect</div>
+          <h2 style="font-size: 2rem; margin: 12px 0;">
+            Have a data problem to solve?
+          </h2>
+          <p>
+            Explore my work or connect with me to discuss data analytics,
+            business intelligence, and opportunities to contribute.
+          </p>
+
+          <div class="buttons">
+            <a class="button primary"
+               href="https://github.com/kudi29"
+               target="_blank"
+               rel="noopener noreferrer">
+              Visit GitHub &#8599;
+            </a>
+
+            <a class="button"
+               href="https://www.linkedin.com/in/wadahfred-kudi-b19344207/"
+               target="_blank"
+               rel="noopener noreferrer">
+              Connect on LinkedIn &#8599;
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span>&copy; <span id="year"></span> Kudi · Data Analyst Portfolio</span>
+      <span>Built with HTML &amp; CSS</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
