@@ -85,11 +85,23 @@
       color: var(--accent);
     }
 
+    /* Hero section */
     .hero {
-      padding: 105px 0 90px;
+      padding: 90px 0;
       border-bottom: 1px solid var(--border);
       background:
         radial-gradient(ellipse at 80% 20%, #19345b 0%, transparent 48%);
+    }
+
+    .hero-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(240px, 0.8fr);
+      align-items: center;
+      gap: 55px;
+    }
+
+    .hero-content {
+      min-width: 0;
     }
 
     .eyebrow {
@@ -103,7 +115,7 @@
     h1 {
       max-width: 780px;
       margin: 18px 0;
-      font-size: clamp(2.5rem, 6vw, 4.7rem);
+      font-size: clamp(2.5rem, 5vw, 4.3rem);
       line-height: 1.12;
       letter-spacing: -2px;
     }
@@ -116,6 +128,25 @@
       max-width: 680px;
       color: var(--muted);
       font-size: 1.08rem;
+    }
+
+    /* Profile picture */
+    .profile-photo-wrapper {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .profile-photo {
+      display: block;
+      width: 100%;
+      max-width: 310px;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: center 25%;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
     }
 
     .buttons {
@@ -284,22 +315,61 @@
       gap: 10px;
     }
 
-    @media (max-width: 700px) {
+    /* Responsive layout */
+    @media (max-width: 800px) {
+      .hero-layout {
+        grid-template-columns: minmax(0, 1fr) minmax(190px, 0.7fr);
+        gap: 28px;
+      }
+
+      .profile-photo {
+        max-width: 250px;
+      }
+
+      h1 {
+        font-size: clamp(2.3rem, 5vw, 3.5rem);
+      }
+
+      .skills {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 600px) {
       .nav-links {
         gap: 12px;
         font-size: 0.8rem;
       }
 
       .hero {
-        padding: 75px 0 65px;
+        padding: 55px 0 65px;
+      }
+
+      .hero-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .hero-content {
+        order: 1;
+      }
+
+      .profile-photo-wrapper {
+        justify-content: flex-start;
+        order: 0;
+      }
+
+      .profile-photo {
+        max-width: 210px;
+        aspect-ratio: 4 / 5;
+      }
+
+      h1 {
+        font-size: clamp(2.5rem, 10vw, 3.6rem);
       }
 
       .projects {
         grid-template-columns: 1fr;
-      }
-
-      .skills {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
       section {
@@ -316,6 +386,14 @@
         align-items: flex-start;
         flex-direction: column;
         padding: 15px 0;
+      }
+
+      .nav-links {
+        gap: 14px;
+      }
+
+      .skills {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -337,40 +415,56 @@
   </header>
 
   <main>
+
+    <!-- Hero section with profile picture -->
     <section class="hero" id="home">
-      <div class="container">
-        <div class="eyebrow">Data Analyst Portfolio</div>
+      <div class="container hero-layout">
 
-        <h1>
-          Turning data into
-          <span>business decisions.</span>
-        </h1>
+        <div class="hero-content">
+          <div class="eyebrow">Data Analyst Portfolio</div>
 
-        <p>
-          I use SQL, PostgreSQL, and Power BI to investigate business
-          performance, build reliable analytical models, and uncover
-          insights that help businesses make informed decisions.
-        </p>
+          <h1>
+            Turning data into
+            <span>business decisions.</span>
+          </h1>
 
-        <div class="buttons">
-          <a class="button primary" href="#projects">
-            Explore My Projects &darr;
-          </a>
+          <p>
+            I use SQL, PostgreSQL, and Power BI to investigate business
+            performance, build reliable analytical models, and uncover
+            insights that help businesses make informed decisions.
+          </p>
 
-          <a class="button"
-             href="https://github.com/kudi29"
-             target="_blank"
-             rel="noopener noreferrer">
-            GitHub Profile &#8599;
-          </a>
+          <div class="buttons">
+            <a class="button primary" href="#projects">
+              Explore My Projects &darr;
+            </a>
 
-          <a class="button"
-             href="https://www.linkedin.com/in/wadahfred-kudi-b19344207/"
-             target="_blank"
-             rel="noopener noreferrer">
-            LinkedIn &#8599;
-          </a>
+            <a class="button"
+               href="https://github.com/kudi29"
+               target="_blank"
+               rel="noopener noreferrer">
+              GitHub Profile &#8599;
+            </a>
+
+            <a class="button"
+               href="https://www.linkedin.com/in/wadahfred-kudi-b19344207/"
+               target="_blank"
+               rel="noopener noreferrer">
+              LinkedIn &#8599;
+            </a>
+          </div>
         </div>
+
+        <div class="profile-photo-wrapper">
+          <img
+            class="profile-photo"
+            src="images/profile.jpg"
+            alt="Portrait of Kudi, Data Analyst"
+            width="310"
+            height="388"
+          >
+        </div>
+
       </div>
     </section>
 
@@ -541,12 +635,15 @@
           <strong>Understand the question.</strong> Clarify the business
           problem and what a useful answer looks like.
           <br><br>
+
           <strong>Validate the data.</strong> Inspect the data quality,
           definitions, relationships, and level of detail.
           <br><br>
+
           <strong>Build reliable analysis.</strong> Transform the data,
           model it appropriately, and verify calculations.
           <br><br>
+
           <strong>Communicate the findings.</strong> Explain what the
           results mean and what deserves management's attention.
         </div>
@@ -557,9 +654,11 @@
       <div class="container">
         <div class="contact-panel">
           <div class="eyebrow">Let's connect</div>
+
           <h2 style="font-size: 2rem; margin: 12px 0;">
             Have a data problem to solve?
           </h2>
+
           <p>
             Explore my work or connect with me to discuss data analytics,
             business intelligence, and opportunities to contribute.
@@ -583,6 +682,7 @@
         </div>
       </div>
     </section>
+
   </main>
 
   <footer>
