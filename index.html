@@ -670,21 +670,22 @@
             <h3>Operations &amp; Revenue Analysis (AdventureWorks)</h3>
 
             <p class="project-lead">
-              Scoped a stakeholder email into KPIs, then analysed 121,253 sales order lines (FY2018 to FY2020) to explain why sales doubled while margin slipped, and where the profit was really being lost.
+              Scoped a stakeholder email into KPIs, then analysed 121,253 sales order lines (July 2017 to mid-June 2020, FY2018 to FY2020) to explain why sales doubled while margin slipped, and where the profit was really being lost.
             </p>
 
             <h4>Key findings</h4>
             <ul class="project-details">
-              <li><strong>Growth with margin pressure:</strong> sales rose from $23.9M to $51.9M, while margin fell from 12.7% to 11.2%.</li>
+              <li><strong>Growth with margin pressure:</strong> sales rose from $23.9M to $51.9M (FY2020 runs only to mid-June), while margin fell from 12.7% to 11.2%.</li>
               <li><strong>Revenue and profit sit in different places:</strong> Australia is about 10% of sales but 29% of gross profit; Central, Southeast and Northeast are 21% of sales at roughly a 2% margin.</li>
-              <li><strong>The losses are a channel problem, not a product problem:</strong> Touring Bikes lose money through resellers (-11.8% margin) but earn 37.8% online. Discounting was tested and ruled out as the cause.</li>
+              <li><strong>The losses are a channel problem, not a product problem:</strong> Touring Bikes lose money through resellers (-11.8% margin) but earn 37.8% online. The recorded discount field was zero on every row, so I derived effective discounts from the sales data; discount depth did not explain the losses.</li>
             </ul>
 
             <h4>What I did</h4>
             <ul class="project-details">
               <li>Turned a broad request into scoped objectives, KPIs and a defined analysis period.</li>
               <li>Profiled the data in PostgreSQL, including key, orphan-record, missing-value and financial reconciliation checks, and documented the limitations I found.</li>
-              <li>Cleaned it through a Bronze → Silver → Gold pipeline and modeled a star schema with sentinel keys and role-playing dates.</li>
+              <li>Cleaned it through a rerunnable Bronze → Silver → Gold pipeline and modeled a star schema with sentinel keys for "not applicable" members and role-playing dates.</li>
+              <li>Reconciled the numbers between layers. About 12.9% of order lines (all reseller) did not match the expected sales calculation, so I kept Sales Amount as the source of truth; recalculating would have overstated sales by roughly $527K.</li>
               <li>Built a Power BI semantic model with central DAX measures and fiscal-calendar time intelligence.</li>
               <li>Wrote prioritized recommendations, such as repricing reseller finished-bike lines against standard cost.</li>
             </ul>
@@ -692,7 +693,7 @@
             <h4>The report</h4>
             <div class="gallery two-cols">
               <figure>
-                <a href="images/page1-executive-overview.png" target="_blank" rel="noopener noreferrer">
+                <a href="images/projects/adventureworks-executive-overview.jpg" target="_blank" rel="noopener noreferrer">
                   <img src="images/projects/adventureworks-executive-overview.jpg" alt="Executive Overview page of the AdventureWorks Power BI report" loading="lazy">
                 </a>
                 <figcaption>Executive Overview</figcaption>
@@ -710,6 +711,7 @@
               <span class="tag">Star Schema</span>
               <span class="tag">Power BI</span>
               <span class="tag">DAX</span>
+              <span class="tag">Data Validation</span>
               <span class="tag">Business Analysis</span>
               <span class="tag">Stakeholder Requirements</span>
             </div>
